@@ -1,0 +1,13 @@
+standard_name,source_name
+id,ID
+id,personID
+name,Name
+name,personName
+email,Email
+email,personEmail
+phone_number,Phone Number
+phone_number,personPhoneNumber
+username,Username
+username,personUsername
+fav_word,Favorite Word
+fav_word,personFavWord
