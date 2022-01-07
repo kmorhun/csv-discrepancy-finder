@@ -74,12 +74,12 @@ def make_difference_entry(dict_1, dict_2, source_1_name=source_1_name, source_2_
         if key == "primary_key":
             continue
 
-        difference[f"{key} {source_1_name}"] = dict_1[key]
+        difference[f"{key}-[{source_1_name}]"] = dict_1[key]
         try:
             if dict_1[key] == dict_2[key]:
-                difference[f"{key} {source_2_name}"] = "same"
+                difference[f"{key}-[{source_2_name}]"] = "*same*"
             else:
-                difference[f"{key} {source_2_name}"] = dict_2[key]
+                difference[f"{key}-[{source_2_name}]"] = dict_2[key]
         except KeyError:
             message = "ERROR: One of the sources is incorrectly formatted"
             write_to_log(message)
